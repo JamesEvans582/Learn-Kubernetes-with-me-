@@ -51,5 +51,52 @@ There will be a few containers in there already. Every container has it's purpos
 Just to note Kubeclt will not work inside of the of the kubernetes node. Kubeclt is an external tool to manage the Kubenetes cluster. So lets leave the ssh connection, type exit in the terminal.
 
 3) Firstly, in your terminal type - Kubectl cluster info 
+<img width="744" alt="Screenshot 2023-02-23 at 16 47 51" src="https://user-images.githubusercontent.com/71371405/220974558-d304cd5d-9d27-4c7e-9512-4447397a723e.png">
+
+As you can see the CoreDNS service is running as well, which means we are able to create deployments, services ect on our kubernetes cluster.
+
+<img width="414" alt="Screenshot 2023-02-23 at 16 55 39" src="https://user-images.githubusercontent.com/71371405/220976348-d77f9801-b573-4dce-b958-e403b893fdf2.png">
+
+We can check what nodes are ready to use, type -> kubectl get nodes (this will be as master and worker)
+And we can which pod are availible in this cluster -> kubectl get pods 
+lets list all the namespaces -> kubectl get namespaces (namespaces are used to group different resources and configuration objects)
+
+<img width="384" alt="Screenshot 2023-02-23 at 17 08 07" src="https://user-images.githubusercontent.com/71371405/220979492-fe55bf9a-c0df-4aa3-bd3b-357ca21734e7.png">
+
+So currently these pods are running, if we wanted to list whats running inside of these pods, so systems for example, we can type -> kubectl get pods --namespace=kube-system
+
+4) This is where it get interesting. The Kubectl commands are similar to docker commands. 
+When we create our own pod, we specify the pod and pull an Image from Docker Hub. Example underneath.
+
+Kubeclt run nginx --image=nginx  (run nginx is the pod and the image is nginx, but the image doesn't have to match)
+
+The image will be in container - container will be in a pod.
+
+So if you're following along, type -> Kubeclt run nginx --image=nginx | then type-> kubectl get pods
+
+<img width="422" alt="Screenshot 2023-02-23 at 17 30 39" src="https://user-images.githubusercontent.com/71371405/220984707-ff02f6e0-cbb2-49f1-9cc4-b06b5a8d1c1b.png">
+
+Congrats, you have a Pod! 
+
+If we need to see what is happening inside this pod type -> kubectle describe pod nginx
+
+Next we will create a port and connect an image 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
