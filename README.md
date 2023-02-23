@@ -57,8 +57,8 @@ As you can see the CoreDNS service is running as well, which means we are able t
 
 <img width="414" alt="Screenshot 2023-02-23 at 16 55 39" src="https://user-images.githubusercontent.com/71371405/220976348-d77f9801-b573-4dce-b958-e403b893fdf2.png">
 
-We can check what nodes are ready to use, type -> kubectl get nodes (this will be as master and worker)
-And we can which pod are availible in this cluster -> kubectl get pods 
+We can now check what nodes are ready to use, type -> kubectl get nodes (this will be working as master and worker)
+And we can also check which pods are availible in this cluster, type -> kubectl get pods 
 lets list all the namespaces -> kubectl get namespaces (namespaces are used to group different resources and configuration objects)
 
 <img width="384" alt="Screenshot 2023-02-23 at 17 08 07" src="https://user-images.githubusercontent.com/71371405/220979492-fe55bf9a-c0df-4aa3-bd3b-357ca21734e7.png">
