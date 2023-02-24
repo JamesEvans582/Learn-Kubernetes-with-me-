@@ -50,10 +50,10 @@ There will be a few containers in there already. Every container has it's purpos
 
 Just to note Kubeclt will not work inside of the of the kubernetes node. Kubeclt is an external tool to manage the Kubenetes cluster. So lets leave the ssh connection, type exit in the terminal.
 
-3) Firstly, in your terminal type - Kubectl cluster info 
+3) Now in your terminal type - Kubectl cluster info 
 <img width="744" alt="Screenshot 2023-02-23 at 16 47 51" src="https://user-images.githubusercontent.com/71371405/220974558-d304cd5d-9d27-4c7e-9512-4447397a723e.png">
 
-As you can see the CoreDNS service is running as well, which means we are able to create deployments, services ect on our kubernetes cluster.
+As you can see the CoreDNS service is running, which means we are able to create deployments, services and ect onto our kubernetes cluster.
 
 <img width="414" alt="Screenshot 2023-02-23 at 16 55 39" src="https://user-images.githubusercontent.com/71371405/220976348-d77f9801-b573-4dce-b958-e403b893fdf2.png">
 
@@ -117,16 +117,6 @@ Project time!
 
 
 
-
-
-
-
-
-
-
-
-
-Next we will create a port and connect an image 
 
 
 
