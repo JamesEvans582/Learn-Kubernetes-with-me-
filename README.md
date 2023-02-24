@@ -72,13 +72,59 @@ Kubeclt run nginx --image=nginx  (run nginx is the pod and the image is nginx, b
 
 The image will be in container - container will be in a pod.
 
-So if you're following along, type -> Kubeclt run nginx --image=nginx | then type-> kubectl get pods
+So if you're following along, to run a pod, type -> Kubeclt run nginx --image=nginx 
+Or better yet, lets create a deployment, type -> kubectl create deployment nginx-depl --image=nginx (after create deployment nginx- will be the name of the deployment)
+
+Then type-> kubectl get pods
 
 <img width="422" alt="Screenshot 2023-02-23 at 17 30 39" src="https://user-images.githubusercontent.com/71371405/220984707-ff02f6e0-cbb2-49f1-9cc4-b06b5a8d1c1b.png">
 
+<img width="555" alt="Screenshot 2023-02-24 at 12 57 53" src="https://user-images.githubusercontent.com/71371405/221184668-3e966db9-c950-447a-90a0-c979615227b0.png">
+
 Congrats, you have a Pod! 
 
+The Layers of abstraction 
+1- Deployment manages a replicaset
+2- ReplicaSet manages a Pod 
+3- Pod is an abstraction of a container 
+4- Everything lower is handled by kubernetes
+
+<img width="1792" alt="Screenshot 2023-02-24 at 14 23 22" src="https://user-images.githubusercontent.com/71371405/221202232-6b69eb5b-7302-4549-8fbc-44732a95d2da.png">
+
+
+
 If we need to see what is happening inside this pod type -> kubectle describe pod nginx
+In a danger recovery scenario pods have Replicaset. Which manages the replicas of a pod. 
+If you have chose to deploy you can see them. Type -> kubectl get replicaset.
+
+
+So we have deployed a pod, but what if we wanted to edit it? Lets type...
+-> kubectl get deployment
+-> kubectl get pod replicaset
+-> kubectl edit deployment nginx-depl
+<img width="1792" alt="Screenshot 2023-02-24 at 13 12 10" src="https://user-images.githubusercontent.com/71371405/221192499-4c10fabb-b706-4991-8b50-d37cf6835318.png">
+If you go to the image under container, you can change the version of deployment. This then create a new pod and will terminate the old one. 
+
+Very important to note, if you need to debug a pod it is best to check the logs. So you will need the pod name. Type -> Kubectl get pod -> kubectl logs [pod name]. However we'll save this one for later as nginx hasn't log anthing yet.
+
+And to delete the deployment, type -> kubectl delete deployment neginx-[name of your deployment]
+
+<img width="1792" alt="Screenshot 2023-02-24 at 14 16 59" src="https://user-images.githubusercontent.com/71371405/221203130-c88d1ee3-566b-4937-8141-bdf6c2e5c82e.png">
+
+We have done a lot so far, but how do put this in action? 
+
+Project time! 
+
+
+
+
+
+
+
+
+
+
+
 
 Next we will create a port and connect an image 
 
