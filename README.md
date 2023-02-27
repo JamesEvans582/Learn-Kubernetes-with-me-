@@ -4,22 +4,22 @@ In this project we'll learn and explore Kubernetes.
 
 Firstly Installation. You will need to install 3 things. 
 
-.Minikube - minikube quickly sets up a local Kubernetes cluster on macOS, Linux, and Windows (https://minikube.sigs.k8s.io/docs/)
+Minikube - minikube quickly sets up a local Kubernetes cluster on macOS, Linux, and Windows (https://minikube.sigs.k8s.io/docs/)
 
 And
 
-.A Container or virtual machine manager, such as: Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation 
+A Container or virtual machine manager, such as: Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation 
 
 And
 
-.Kubectl - The Kubernetes command-line tool, allowing you to run commands against Kubernetes cluster (https://kubernetes.io/docs/tasks/tools/)
+Kubectl - The Kubernetes command-line tool, allowing you to run commands against Kubernetes cluster (https://kubernetes.io/docs/tasks/tools/)
 
 You can use these links or terminal - brew install (container) - brew install minikube
 
 
 In order to start a cluster we need to begin locally. Being a Mac user I have chosen Docker. Which is also a great resource as you can pull images from Docker Hub. 
 
-1) In your terminal type | minikube start --driver=docker
+1) In your terminal type -> minikube start --driver=docker
 
 <img width="831" alt="Screenshot 2023-02-23 at 12 55 16" src="https://user-images.githubusercontent.com/71371405/220913350-3238ccc2-7b6f-4374-a96e-a27f1285e470.png">
 
@@ -113,13 +113,11 @@ And to delete the deployment, type -> kubectl delete deployment neginx-[name of 
 
 We have done a lot so far, but how do put this in action? 
 
-Project time! 
+Well, you can use Visual studio code to create a docker file and image, using node.js for example, just make sure you have node.js and Npm installed locally. Within Vs code you can also use docker compose or build. Once you have done this step, you can create a cluster via kubernetes and and push the image to kubernetes, running the project locally. The next step would be automation, this means we can involve jenkins, which can handle any updates within CICD chain.
 
 
 
-
-
-
+Upcoming project soon! 
 
 
 
